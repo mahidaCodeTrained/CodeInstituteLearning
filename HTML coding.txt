@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+</head>
+<body>
+    
+</body>
+<!--Attributes are extra pieces of code that are assigned to elements such as <p> or <a> (anchor) or <h1> for headings. 
+    Attributes allow code to have extra customizable properties beyond the standard ones they already have.
+    Attributes in addition, have values assigned to them. For exmaple the attribute of height would have a value assigned to it with an = sign "50" -->
+  
+    <!--For example check below.-->
+
+<h1 height= "50";> 
+    
+  <source>  <!--The src (source) attribute is an attritube that is widely used alongside the <img> element. 
+    src allows the image to be displayed as it provides the link to the image-->
+
+<alt> <!--The alt (alternative) attribute is used alongside the img element aswell. It provides images a text display if the image doesn't load.
+It can also describe the image for visually impaired users browsing your webpage.-->
+
