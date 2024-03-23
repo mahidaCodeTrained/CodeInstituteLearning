@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en=US">
+<head></head>
+<body></body>
+<!--These are the first three elements and are the core elements in any HTML program.-->
+
+<img> <!--This is the image element. This allows images to be displayed on web browsers.
+          commonly used with the src and alt attributes.-->
+
+
+<a> <!--The anchor element <a> allows for the use of clickable links on a webpage.
+    There are two types of anchor <internal> and <external> for links.
+        this is commonly used with the href and target attributes. -->
+        <a href="https://stackoverflow.com" target="_blank" rel="help">Stack Overflow</a>
+
+        <!--This example above is of an external link. External links provide a link to another website page; this can be a link to another page on the same website
+             or a link to another site. 
+        External links can also be used to download files.-->
+
+        <a href="#next-section">Jump to section on the same page</a>
+
+        <!--^ This showcases a internal link which is a link that is meant to redirect you to the page you're already on. 
+              It is designed to redirect you using an id attribute to a section of the page.-->
+
+   
+              
+              <ol>   <!--The list elements both <ol> and <ul> are elements used in HTML to create lists either ordered with numetrical values such as 
+                  one, two and three. Ordered lists are important because they add weight and importance to a set of rules such as a cooking recipe.-->
+                   
+              <ul>  <!--However, unorded lists work with bullet points as it doesnt stress the value of order like a <li> does. A <ul> will then use bulletpoints
+                  as the order in which the bulletpoints are in don't matter as there isnt any stress of importance layed on. -->
+
+                  <!--These <ol> is defined using the <li> element which is it's child element.-->
+             
+                        <!-- Numerically ordered list -->
+      <ol>
+            <li>Lightly toast the pitta, leave to cool, then slice down one edge.</li>
+                        <li>Grill the halloumi, turning until browned on both sides.</li>
+                        <li>Wash and chop the salad.</li>
+                        <li>Fill pitta with salad, humous, and grilled halloumi.</li>
+          </ol>
+          
+          <!-- Alphabetically uppercased ordered list -->
+          <ol type="A">
+            <li>Lightly toast the pitta, leave to cool, then slice down one edge.</li>
+                        <li>Grill the halloumi, turning until browned on both sides.</li>
+                        <li>Wash and chop the salad.</li>
+                        <li>Fill pitta with salad, humous, and grilled halloumi.</li>
+          </ol>
+          
+          <!-- Alphabetically lowercased ordered list -->
+          <ol type="a">
+            <li>Lightly toast the pitta, leave to cool, then slice down one edge.</li>
+                        <li>Grill the halloumi, turning until browned on both sides.</li>
+                        <li>Wash and chop the salad.</li>
+                        <li>Fill pitta with salad, humous, and grilled halloumi.</li>
+          </ol>
+          
+          <!-- Order by roman numbers -->
+          <ol type="I">
+            <li>Lightly toast the pitta, leave to cool, then slice down one edge.</li>
+                        <li>Grill the halloumi, turning until browned on both sides.</li>
+                        <li>Wash and chop the salad.</li>
+                        <li>Fill pitta with salad, humous, and fried halloumi.</li>
+          </ol>
+
+          <!--To call upon an unordered list is the exact same. You would just have to call
+              upon the <ul> element and have it's child the <li> element nested within.-->
+
+              <!--It is important to note that both ordered and unordered list can be nested within one another. -->
+
+    <table> <!--This is another element that has many child elements nested within it such as <tr> for table row, <th> for table heading
+      and <td> for table data where you add the entries. These are all nested within <table>. -->
+
+      <tr> <!--Is nested within --> <table>. <th> <!--and--> <td> <!--are nested within --> <tr>
+
+
+    <form> <!--The form element has many uses such as login and registration to secure webistes. 
+    live chat, buying products online, or filling out an online survey. 
+    
+    You will see common elements that are nested inside a <form> such as the self closing <input> element. -->
+
+  <form> 
+<input type="text">  <!--This creates a text box to enter information such as an email. -->
+</form>
+    
+<form>
+<input type="submit"> <!--This creates a submit box on the webpage. -->
+</form>
+
+<!--It is important to note about form attributes. Form attributes allow the form data to know where it is meant to be going.
+To specify the form data then you have to use an "action" attribute and to specify the data delivery method using a "method" attribute. -->
+
+<form action="https://submitgoeshere.com" method="POST">
+  <input type="text">
+  <input type="submit">
+</form>
+
+<!--The POST method is used when you need to update data in a database, for example, when a user submits a feedback form.
+ The form would need method="POST" on it so that this data is put into the database.
+
+The GET method fetches existing data from the database but does not add the data in the form to the database. 
+You might use this method on a login form, which would be part of the code to check if the username value provided by a user matches an entry in the database. 
+When you use this method, the form element needs method="GET" on it.--> 
