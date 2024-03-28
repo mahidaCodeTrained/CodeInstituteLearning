@@ -102,3 +102,127 @@ To specify the form data then you have to use an "action" attribute and to speci
 The GET method fetches existing data from the database but does not add the data in the form to the database. 
 You might use this method on a login form, which would be part of the code to check if the username value provided by a user matches an entry in the database. 
 When you use this method, the form element needs method="GET" on it.--> 
+
+<!--The <form> element with their type attributes contain main different ones to collect different types of data.
+  A type="text" attribute provides a text input field and accepts any letters, numbers and special characters from the keyboard as it's content.
+A type="submit" attribute creates a button to submit the form.
+A type="radio" attribute creates a radio button for a user to click.
+A type="checkbox" attribute creates a checkbox for a user to select.
+A type="password" attribute creates a text box and replaces any characters entered into it with *.
+A type="date" attribute creates an input field that shows a date-picker when clicked. -->
+
+<label> <!--The label element in HTML gives forms a context behind it. It allows the user to recognise what the input field wants.
+It has a "for" attribute to correspond to an id. The example is below. -->
+<label for="name">Name</label>
+<input id="name" type="text">
+
+<!--Input fields determine the data that the form requires you to put in. -->
+<!-- More information ^ will be found on the Attributes page of this codespace. -->
+
+<!--Another form component is "checkbox" which allows you to select/deselect options on a form through a checkbox. 
+<radio> is another which only allows you to select one option out of many in a checkbox. -->
+<form>
+
+<label for="red">Red</label
+<input type="radio" id="red" value="red" name="color">
+
+<label for="green">Green</label>
+<input type="radio" id="green" value="green" name="color">
+
+<label for="blue">Blue</label>
+<input type="radio" id="blue" value="blue" name="color">
+
+<label for="black">Black</label>
+<input type="radio" id="black" value="black" name="color">
+
+<label for="pink">Pink</label>
+<input type="radio" id=pink value="pink" name="color">
+
+</form>
+<!--This gives you the radio box input type which allows to select one of many different checkboxes.
+This particular example above ^ showcases a radio type form for color it is imporant to note that 
+this input type is not the only input type that can give you multiple options, there is also a <dropdown> type that is within
+  the confines of the <form> element. -->
+
+ < "<select>" element. > <!--The select componenet allows you to create dropdown menus to click
+                          on a wide variety of different options. This is used for example when 
+                          you fill in your nationality in a form. -->
+
+<option> <!--This element displays the option text and can have an optional value that is a unique identifier
+              to that option. Each <option> element contains a single choice. -->
+
+ <datalist> <!-- This is another element that is found within forms and it works in combination with 
+                 the input element. <datalist> provides the user with suggested options/possible options to choose from.   
+                  This can be seen in Google and other browsers that give you suggested searches. -->           
+
+                  
+                  <datalist id="ice-cream-flavors">
+		<option value="Chocolate"></option>
+		<option value="Coconut"></option>
+		<option value="Mint"></option>
+		<option value="Strawberry"></option>
+		<option value="Vanilla"></option>
+	</datalist>
+  
+  <fieldset> <legend> <!-- The fieldset and legend element are new forms introduced by HTML5. 
+                           These elements group related elements together. The <legend> element 
+                            follows the fieldset element and gives its content a title. -->
+                            
+                            <!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    </head>
+    
+    <body>
+        <form action="https://formdump.codeinstitute.net/" method="POST">
+            <fieldset>
+                <legend>User Details</legend>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email">
+            </fieldset>
+            <input type="submit" value="Send Request">
+            
+            
+            
+            
+        </form>
+    </body>
+</html>
+
+<img> <!--We've already talked about the <img> element earlier in this codespace. However, we will go further in depth now.
+The img element is a self closing element therefore doesn't need a closing tag.
+-->
+<picture> <!--This element is far more detailed than the img element. This <picture> element allows you to show different pictures depending
+  on the width of your browser viewport. This is responsive design. The picture will change depending on if you see it on desktop windows or a mobile screen.-->
+  <!-- Add your picture element here -->
+	<picture>
+    <source srcset="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/desk-small.jpg" media=(max-width:600px)>
+    <source srcset="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/desk-portrait.jpg" media=(max-width:800px)>
+    <img src="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/desk-landscape.jpg" alt="Photograph of a laptop, notepad and amug of cappuccino coffee on a wooden desk">  
+</picture>
+
+<!--An example of the picture element and how it works and is layed out^-->
+
+<iframe> <!--This is another element that is a means of embedding live content from another web site into a web document.
+it uses the url of an external website to embed the site's content locally in the document.
+The essential attribute with this element is the src attribute. The width and height attribute also go along with this.-->
+
+<audio> <!--This element is used to embed sound into a html document. The source of the audio that is previewed onto the webpage will be 
+defined using the src attribute. 
+However, there are more attributes that can be used with the <audio> element. A key attribute is "controls" which gives the user
+  playback options and volume control options. The "loop" attribute allows the video to be played over again once it's finished.
+  The "mute" attribute allows the video to be muted when it's first played, example down below-->
+  <audio src="myAudio.mp3" controls muted loop></audio>
+  <!--The audio element often has a <source> element and a <track> element nested within it. -->
+
+  <video> <!--The video element is used to embed video on a web page. The main attribute is the "src" attribute.
+  The video element however, can take several different attributes depending on the behaviour you want it to have
+such as the "autoplay" "loop" "muted" attributes and "width" and "height"-->
