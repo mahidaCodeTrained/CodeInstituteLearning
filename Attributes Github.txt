@@ -54,4 +54,19 @@ when used with target="_blank". This is essential to be added otherwise you will
 
 
 <type> <!--These attributes known as "type" are attributes that are used in forms. 
-This can create boxes, submit boxes, email text etc.-->          
+This can create boxes, submit boxes, email text etc.-->  
+
+<name> <!--The name attribute is widely used in forms as the name that is used in input fields,
+           provides the key in which to pair the users data in the database. For example,
+           if a user puts their name in the "name" input databox, "William Toby" then all of the data that this user
+          provides will be under the id of "William Toby"-->
+         
+<textarea> <!--This element gives the user the opportunity to add signifcant amount 
+              of text to a textbox. This differs from using an <input element>. 
+              It is important to note that <texttarea> has two attributes called <rows> and <cols>
+              like <input> elements <textarea> also requires values for name and id attributes.-->
+
+  <required> <!--This is another attribute that is used to make sure that input fields are validated.
+  The required attibute acts as a failsafe that denies anybody to put an empty entry. 
+It as it's name suggests is a requirement to the user to complete that input field. -->              
+      
