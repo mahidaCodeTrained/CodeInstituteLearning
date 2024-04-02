@@ -1,0 +1,99 @@
+
+/*This is the start of learning Cascading Style Sheets which is the term for CSS. The stylish language that helps visually improve HTML webpages.*/
+
+/*CSS is concerned with making the look of a website and it follows a set rule in doing so. 
+"{           }" are always used when making anything in CSS. In addition a colon and semi colon are prevelant as a declaration of CSS.-->
+
+<!--In CSS if you want to target specific elements and give it their own unique style from the rest of the webpage then you
+     need to provide it an ID selector, (#) this allows you to call upon the id in the body of the element whilst styling that specific ID
+    through CSS in the head element or in a different style sheet that you link in the head element.-->*/
+
+    #myElement {
+   color: teal;
+font-family: New Times Roman;
+    }
+    <!--This CSS code above ^ styles an ID called "myElement" and whenever this id is now called upon in the body it will give it an element a specific style.-->
+    <p id="#myElement">This is how it is done.</p>
+
+    /*This <p> element now will show in teal and have a font of new times roman.*/
+    
+    /*If you have a group of elements on a webpage that are very similar to eachother then you can semantically group them together
+    with a class selector. In CSS a class selector is (.) a dot. The selectors name matches the class attribute's value. */
+
+    .myElement {
+   color: green;
+    font-family: Arial;
+    }
+   
+    /*This is an example of a class selector. The . period replaces the #.*/
+
+   /*It is important to remember that in CSS there is an order to the way you do things. 
+   You have to write your code in specific ways to target specific elements at a specific time. 
+   What I mean by this is that it must follow a rule that the elder descendant element must always go infront of the child.
+   This ensures that a set rule based on the elements cannont be overturned however can be modified based on the rulings you set. */
+
+   1. CSS can be imported.
+   2. CSS style can be used via the <style> element in the <head> of a <html> document.
+   3. CSS can be done on an external file which you import via <link> element.
+
+   h1 {
+    /* 
+      "h1" is the selector
+      "text-align" is property
+      "center" is value of the property
+    */
+    text-align: center;
+  }
+
+   /*The class selector in CSS is just the element that is being changed with CSS. ^ In the above example he <h1> element is the selector.
+    /* p is the type selector */
+    p {
+      color: red;	
+   }
+ </style>
+</head>
+<body>
+/*All paragraphs will have a red text color*/
+<p>paragraph 1</p>
+<p>paragraph 2</p>
+<p>paragraph 3</p>
+<p>paragraph 4</p>
+<p>paragraph 5</p>
+</body>
+
+   /*We can use more than one class selector on an element in CSS by seperating them within the quotes ("). For example.... */
+   
+   <div class="dimensions color-palette"></div>   /*This element now uses two class selectors "dimensons" and "color-palette"*/
+
+   /*However, an ID selector as we stated before is completely unqiue and the id that is created should ever only be subject to being on a single element not multiple.
+   It gives that element a sense of uniqueness in the webpage and it should stand out from the rest.
+
+  */---------------------------------------------------------------------------------------------------------------------------------------------------------------------------/*
+
+  It is important to note that attributes can also be stylised with CSS. The example code below provides the template on how to modify and change the apperance of attributes.*/
+
+  <title>Attribute selectors</title>
+  <style>
+
+    input[type=password] {
+        background-color: lightgreen;
+    }
+
+    a[target=_blank]{
+        color: red;
+        font-weight: bold;
+    }
+
+    /*A CSS pseudo-class is a keyword added to a selector that specifies a specific state of the selected element or elements.
+     The psuedo-class is called for by a : colon. It allows CSS to style external factors such as the history of navigation and status of a documents content.
+     For example, if you have clicked on a checkbox or have hovered over something. :checked :hover :focus are pesudo classes called upon very commonly.
+                                                        EXAMPLE */
+
+                                                        button:hover {color:blue}
+                                                       [/*Selector]
+  
+    ==============================================================================================================================================================================*/
+
+    /*The DOM */
+     
+  /*The "D O M" represents the Document Object Model. This model represents each of the HTML elements on a page and their relationships to each other.
