@@ -101,4 +101,51 @@ separate from the rest of the content of the page, and still make sense.-->
 It can contain information inside the widget.
 It usually has an arrow pointing down/sideways to indicate whether or not it's opened or closed.-->
 
-<
+<!--WE WILL NOW COVER ARIA ATTRIBUTES BELOW.-->                                                    
+
+ <ARIA> <!--These aria attributes that will follow this text add extra accessiblity to HTML webpages for visually impaired or audio impaired/physicially impaired users.
+            ARIA stands for Accessible Rich Internet Applications
+             and is a set of attributes that define ways to make web content and web applications more accessible to people with disabilities.-->
+
+             <!--To provide information about what your links, icons and interactive elements are for,
+                 and further detail about how they behave, the aria-label attribute can be applied to them. 
+                 The value for an aria-label is a string of text that labels the purpose and behaviour of the element. For example: -->
+
+<a href="https://twitter.com/CodersInstitute" aria-label="Go to our twitter page (opens in new tab)" target="_blank">Twitter</a>
+
+<!--aria-labelledby is another attribute that establishes a relationship between objects and their labels.
+The value given to the aria-labelledby attribute should be one or more element IDs, which refer to elements that have the text needed for labelling.-->
+
+<!--For example:...-->
+<div aria-labelledby="heading-one heading-two">
+    <h1 id="heading-one">First heading</h1>
+    <p>Paragraph text here...</p>
+    <h2 id="heading-two">Second heading</h2>
+    <p>More paragraph text here...</p>
+    </div>
+
+    <meta> <!--The <meta> element in HTML5 semantic makeup is defined in thwe <head> element as a child.
+        The meta element allows developers to define important data about their website that will be rendered on display and SEO.-->
+
+        <charset> and <viewport> <!--Charset and Viewport
+        
+        We use the charset metadata to define the encoding of a website. When we task the meta element to define the character encoding of a website
+        , then it uses the charset attribute, the value is usually UTF-8 for Unicode.-->
+
+        <!--However, the viewport metadata type is used to define the viewport - the user's visible area of the web page. 
+            This area varies depending on the device, being smaller on a mobile than on a computer screen. 
+            This is how the metadata for your viewport should be set on all web pages: -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+content="width=device-width" <!--This makes the width of the page follow the width of the screen on whatever device you're viewing it on.-->
+initial-scale=1.0" <!--This part of code makes the intial zoom value when you load the page 1.0-->
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--The final three meta keywords we will discuss are description, keywords and author.-->
+    <meta name="description" content="Online gallery for abstract painter Joe Blogs">
+<meta name="keywords" content="abstract art, painter, paintings, art, artist">
+<meta name="author" content="Joe Blogs">
+<!--Description describes the webpage when searched, keywords are what are inside the page and the author is who the webpage is about or who created it.-->
