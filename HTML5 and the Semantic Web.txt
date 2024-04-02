@@ -1,0 +1,104 @@
+><!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+
+<!--HTML5 is the new version of HTML. It has many semantic web elements and this section of this codespace will help define those. -->
+<header> <!--This element in semantic web development, really sets the tone for the webpage or webarticle you write. 
+The header element provides introductory content to the webpage and is usuallly defined with nestign a <h1> element inside it.
+    It is important to note that <header> is also used in <article> elements as a child element. 
+        However, we will touch on this <article> element later on in this section of the codespace.-->
+            <header>
+                <h1>National Cheese Emproium</h1>
+                <p>
+                  Finest cheese shop in the district.   <!--This is an example of the <header>-->
+                </p>
+              </header>
+
+  <nav> <!--The element <nav> represents a location on a page. The location that it represents links you to other parts of the webpage.
+         common use of <nav> is to create navigation menus and are mostly found below the header in a webpage.
+            The use of the <nav> element is common in complex web page development. As the <nav> element links to many different areas of a webpage. It can be used for, 
+                site navigation or navigation of elements on the same page.-->       
+                
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>      <!--This is the <nav> element in full swing. The <a> anchor element creates the clickable links -->
+                    <a href="#">Shop</a>         <!--  to other areas of the webpage such as "contact" section or"About" section. --> 
+                    <a href="#">Search</a>
+                  </nav>
+
+<footer> <!--The <footer> element is another HTML5 semantic element. It is commonly used in the end of a web document/page.-->
+
+<section> <!--This element contains a section of content within a page.-->
+
+<article> <!--The article element can be used many times on a webpage, it is commonly used with blog posts.
+              It can contain one or more <section> elements inside it. Below is example code of an article.-->
+                <article class="series_review">
+                    <header>
+                        <h1>Back to the Future</h1>
+                    </header>
+                    <section class="main_review">
+                        <h2>Main review</h2>
+                        <p>Great Scott, we loved it!</p>
+                    </section>
+                    <section class="user_reviews">
+                        <h3>User Reviews</h3>
+                        <article class="user_review">
+                            <p>Kids and parents alike are gonna dig this wonderful fantasy.</p>
+                            <footer>
+                                <p>Posted by Mike</p>
+                            </footer>
+                        </article>
+                        <article class="user_review">
+                            <p>There isn't a wasted scene.</p>
+                            <footer>
+                                <p>Posted by Derek</p>
+                            </footer>
+                        </article>
+                        <article class="user_review">
+                            <p>Every bit as classy, clever and cockle-warming as it was 30 years ago.</p>
+                            <footer>
+                                <p>Posted by Maria</p>
+                            </footer>
+                        </article>
+                    </section>
+                </article>
+
+<aside> <!--The aside element is generally used for a portion of a document where the text is indirectly related to the main documents content.
+It is used in tandem with CSS. -->
+
+<figure> <!--The figure element in semantic HTML5 represents self contained content such as an image, diagram or illustration.
+We use the image element to embed the image in an HTML document whereas we use the figure tag to semantically organize the content of an image in the HTML document. 
+By placing an image file into a figure element, you are telling the browser and search engines that the content of the figure could be seen on its own, 
+separate from the rest of the content of the page, and still make sense.-->
+          
+                                          <!--The <figure> element has a child element called the <figcaption> element that is used to describe the image in the <figure>
+                                            You would use a <figure> where an image is not just decorative but is referred to in an article.-->
+
+<caption> <!--The caption element is used within tables and the <table> element.
+            The caption element should be the first child of the table element.-->
+
+<details>&<summary> <!--These semantic HTML5 elements adds a widget to the webpage that can be toggled to open and close.
+It can contain information inside the widget.
+It usually has an arrow pointing down/sideways to indicate whether or not it's opened or closed.-->
+
+<
