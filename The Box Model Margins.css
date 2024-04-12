@@ -1,0 +1,102 @@
+/*The Box Model is a model that is used which defines the different parts of a HTML element. 
+The model looks at content, padding, border and margin. 
+
+The Box Model allows you to manipulate how your elements look, based on the property that is altered.
+
+.The content in the box model is the content of the element: text, images etc. It contains the actual content.
+
+.The padding creates space around the content between the content and its border.
+
+.The border defines a border around the element. Whenever we want to draw a frame around an element, like the edge of a button, we would use the border part of the box model.
+
+.The margin creates space around the element itself, between its border and other elements around it. */
+
+div {
+    padding-left: 0%;
+    padding-top: 0%;    /*This is how you use the padding property the different properties are left, top, bottom and right. */
+    padding-bottom: 0cqi;
+    padding-right: 0ch;
+}
+
+div {
+    padding: 10rem /*<padding-top> || <padding-right> || <padding-bottom> || <padding-left>*/
+}
+/* shorthand padding*/
+
+
+
+.box {
+  padding: 20px;
+}
+
+/* The same padding written longhand */
+.box {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+div {
+    margin-top: auto;
+    margin-bottom: auto;   /*This is how you use the margin property for a html element. */
+    margin-left: 0svi;
+    margin-right: inherit;
+}
+
+
+/*It is important to realise that the Box Model outlines the structure for every html element.
+Adding padding will increase the size of the element so you need to take this into account with respect to your layout. */
+
+div {
+    border: 0ch;
+    border: 0vh;
+    border-bottom:0cm;
+    border-top: 0cqi;
+}
+/*When creating a border with CSS, there are three values that you need to set: border-width, border-style and border-color.
+ You can set these values individually, or you can use the shorthand border property. */
+
+ /*The values for the property border-style are as followed. 
+ - solid / a solid line across the element.
+ - none / nothing changes
+ - dashed / A line that consists of dashes around the element.
+ - dotted / A line that consists of dots around the element.
+ - double / A double line across the element.
+ - groove / Adds a bevel based on the color value in a way that makes the element appear embossed into the document.
+ - ridge / Similar to groove, but reverses the color values in a way that makes the element appear proud of the page.
+ - inset / This adds a 3D look to the line which makes the element look slighty inset into the page.
+ - outset / Similar to inset but this time it's slightly raised. */
+
+ div {
+    border-style: dashed;
+    border-style: groove;
+    border-style: dotted;
+ }
+
+ /*The next property border-color just changed the color of the border using the color values we have already talked about in CSS.*/
+ div {
+    border-color: blue;
+    border-color: crimson;
+ }
+
+ /* However, border has a shorthand property which is simply assigned as "border" which can put all these sub properties into one. (eg) */
+
+ div {
+    border: 2px dashed blueviolet;
+ }
+
+
+ /*A fun trick to know is that you can make a square div into a circle using the border-radius property:
+
+This is done with the following code:*/
+div {
+width: 50px;
+height: 50px;
+border: 1px solid black;
+border-radius: 50%;
+}
+
+/*As the 50% is a relative measurement,
+ to make the circle, your element must start as a square, with its length and width being equal. 
+ Then the border-radius curves the corners perfectly to make the circle.*/

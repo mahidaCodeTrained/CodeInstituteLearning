@@ -1,0 +1,103 @@
+/* We will talk about some additional properties in this codespace. We will start with "overflow" which is a property that is designed to help when the content in bigger than the 
+container.
+
+If the content is ever bigger than the container than we can call upon the "overflow" property as it controls the content that falls out of the barrier of the container. */
+
+div {
+    overflow: auto; /* If you set the value to auto then a scrollbar will appear to show the rest of the content that fell out of the container. */
+
+}
+
+
+div {
+    overflow: scroll; /* This will create a scrollbar regardless on if the content falls out of the barrier. */
+}
+
+div {
+    overflow: hidden; /* Hidden is used when we want to clip out the content that is hanging out of the container. This is useful when dealing with dynamically generated content,
+    where an overflow would cause major issues with the layout of a webpage. */
+}
+
+
+div {
+    overflow: visible; /* The visible value exists if you dont care that the content has overflowed across it's container. You want the entire content to be shown then you would 
+    use the visible keyword. */
+}
+
+/* CSS allows us to control the vertical or horizontal scrollbar with two properties.
+
+overflow-x controls the horizontal scrollbar
+overflow-y controls the vertical scrollbar
+overflow-x and overflow-y have the same values as the overflow property */
+
+/* ========================================================================================================= */
+
+/* We will now discuss flexbox. Flexbox allows us to make sure that a website and elements look good on every webpage no matter the device you're viewing it on. 
+It is responsive design. Flex containers automatically adjust their children to match in size or to fill up the space as needed.
+
+Flexbox is a very useful toolkit. It allows you to arrange things in rows and collumns or to reverse and reearnage the order of the elements without having to change 
+the HTML code.
+
+There are two flexbox properties called "flex-wrap" and "flex-direction"
+              "flex-wrap" controls whether or not elements are allowed to wrap to a new row/column if there isnt enough space.
+              "flex-direction" controls how the child elements are arranged by seeting the main axis. 
+
+              There are other properties such as justify-content which controls how elements are distributed across the main axis.
+              and "align-items" Controls how elements are distributed on the cross axis (opposite to the main axis , as described above).
+
+              "gap" is another property which higlights the minimum gap between elements. */
+
+              section {
+                flex-wrap: wrap;
+                flex-direction: row;
+                flex-flow: wrap column; /* Flex-flow is the shorthand property for flex-wrap and flex-direction */
+              }
+
+
+/* Sometimes....children dont always do what their parent elements tell them to do. They want to stand out and behave differently from the rest. In CSS we can achieve this using..
+child properties for flexbox.  The child properties are flex-basis, align-self and order.
+
+flex basis = " Flexbox version of width: determines the size along the main axis (width for row, height for column). A soft constraint which can be adjusted as needed."
+align-self = "A property that allows a child element to override the align-items setting that the parent has imposed."
+order = "A property that puts the child elements in an order the smallest number for example (-1) will be at the start and the highest (3) will be at the end. */
+
+.child {
+    flex-basis: 200px;
+    align-self: flex-start;
+    
+}
+
+#child2 {
+    order:-1;
+}
+/* That piece of code would start that the top of a container and be the first in order as it's the smallest value of the children. */
+
+/* Flex-grow is another property that lets our elements know how much leftover space in the parent it should use. We use this property when you want to affect the size of one or more
+children.
+
+It is important to remember that:
+
+Flex-grow is only applied when there is leftover space in the parent. It will not do anything if there is no leftover space. */
+
+.child {
+    flex-grow:1;
+    align-self:flex-start
+}
+
+
+/* Another property is flex-shrink. Flex-shrink is used when there is a defecit. This means that instead of there being leftover space in the parent... there is zero space left in
+the parent. It tells our elements how much they should shrink. */
+
+.child {
+    flex-shrink: 2;
+
+}
+
+/* There is however a shorthand version for flex-grow and flex-shrink and flex-basis called (flex). */
+
+.child {
+    flex: 0 2 200px;  /* The first 0 is (grow) the next (2) is shrink and (200px) is the flex basis. */
+}
+
+/* Refractoring is the process of making your CSS code more readable and making improvements on it 
+

@@ -1,0 +1,160 @@
+/*In CSS there are many properties which act as stylistic componenets for the backgrounds of elements. 
+In this very short file in the codespace we will discuss this and showcase the CSS code regarding these properties and what they do.*/
+
+
+
+
+/*- Background-color / The background color property is exactly what you expect it to be.. it changes the color of the background of an element for example the <body> or <div>
+*/
+
+div {
+    background-color: black;  /*The color can be made using RGBA, HEX, HSL or color names. */
+    background-color: #ff0000; 
+    background-color: currentColor;
+    background-color: transparent;  /*It can also use keywords like currenColor and transparent. */
+}
+
+div {
+
+    /* Keyword values */
+background-color: gainsboro;
+background-color: lightcoral;
+
+/* Hexadecimal value */
+background-color: #0000ff;    /* blue opaque */
+background-color: #00f;       /* blue opaque shorthand */
+background-color: #0000ff00;  /* blue transparent */
+background-color: #00f0;      /* blue transparent shorthand  */
+background-color: #0000ffff;  /* blue opaque */
+background-color: #00ff;      /* Fully opaque shorthand  */
+
+/* RGB value */
+background-color: rgb(0, 0, 255);        /* blue opaque */
+background-color: rgba(0, 0, 255, 0.5);  /* 50% transparent */
+
+/* HSL value */
+background-color: hsl(67, 100%, 50%);         /* yellow opaque */
+background-color: hsla(67, 100%, 50%, 0.75);  /* 75% transparent */
+
+/* Special keyword values */
+background-color: currentcolor;
+background-color: transparent;
+
+/* Global values */
+background-color: inherit;
+background-color: initial;
+background-color: unset;
+}
+
+/*The next property we will discuss is background-image. */
+
+div {
+    background-image: image(); 
+
+}
+
+/*This property gives the webpage an image background but it's important to set a background color incase the picture doesn't load as a fallback. 
+It can set one or several pictures which are stacked on top of eachother
+The image is placed by default at the top-left of the element. 
+It covers the padding and border of the element but not the margin. If the image is smaller than the element it will be repeated both horizontally and vertically.*/
+
+div {
+    background-image: url('path_to_background_image');
+} 
+
+div {
+    background-color: blue;
+    background-image: url('https://dummyimage.com/70X70/0ff/000.png');
+    height: 175px;
+    width: 175px;
+
+}
+
+/*==========================================================================================================================================*/
+
+/*The next background that we will look at will be background-repeat. This property essentially specifies how many times a background can be repeated. 
+A background rpeats vertically and horizontally. We can repeat the background image vertically by setting the value to repeat-y.
+ We can repeat the background-image horizontally by using value repeat-x. Usually, we do not want to repeat the image at all, to set this we would use the no-repeat value.
+
+ We should use background-repeat with caution, as visually it can be distracting unless the image has symmetry.
+  Also, with tiling images, you will see cropping if the size of the element is not a multiple of the image size. 
+ To avoid cropping, you can use the space or round keywords which will space out the images evenly or stretch them to fill the space respectively. */
+
+ div {
+    background-image: url('path_to_background_image');
+background-repeat: no-repeat;
+ }
+
+/*========================================================================================================================================*/
+
+/*The next background property we will discuss is background-size and background-position. 
+
+
+Background Size = The CSS property "background-size" seems pretty straightforward. It specifies the size of the background image. 
+However, a coder must be careful when sizing a background image because images can be stretched or squeezed making the website look amateur.
+
+There are certain keywords used as values of this property which sizes an image accordingly if you don't want to use other measurements like (px). 
+Keyword values cover and contain can be used. Using cover tells the browser to ensure the whole element is filled even if it has to stretch the image in one direction,
+and crop in another. Using contain will tell the browser to show the whole image so if it is a different aspect ratio to the element you will see empty space at the sides or bottom.
+ You can also use auto where the browser will calculate the best size based on the actual image dimensions and aspect ratio. */
+
+ div {
+    background-size: auto; /*calculated sizing*/
+    background-size: contain; /*empty space whole image*/
+    background-size: cover; /*stretch*/
+ }
+ 
+ /* One-value syntax */
+/* Only width of image (height is 'auto') */
+div{
+background-size: 70%;
+background-size: 4rem;
+background-size: 50px;
+background-size: auto;
+}
+/* Two-value syntax */
+/* first: width, second: height */
+div {
+background-size: 70% auto;
+background-size: 4rem 25%;
+background-size: auto 10px;
+background-size: auto auto;
+}
+
+/*Moving on.....the background-position property changes the horizontal and vertical positon of a background image in a contained (element).
+We can use several keywords: left, right, top, bottom, and center, but their order doesn’t matter. They can be used in pairs as well but not for the same axis. */
+
+div {
+    background-position: bottom 100px right 50px;
+    background-position: top 2rem left 50px;
+}
+/*==================================================================================================================================================*/
+
+/*The next properties we will look out with background is background-attachment and background's shorthand property which is simply "background". */
+
+/*background-attachment- This is a property which tells the browser if the element is fixed or scrollable. 
+To set this movement, we use the values scroll, fixed or local. The scroll keyword is the default where the image scrolls with the main browser window ,
+but is fixed with respect to the element it is the background of. Using fixed means the image is fixed so as you scroll the element will appear like a window to the image beyond. 
+If you use local, then you can scroll the main browser viewport and within the element. */
+
+div { 
+    background-attachment: fixed;
+    background-attachment: scroll;
+    background-attachment: local;
+}
+
+
+
+
+/*Now we will look at the final background property which is simply background shorthand. "background" can fill in all of these properties into one with a space in between them. 
+*/
+
+body {
+    background:
+       red                      /* background-color */
+       url(sunset.jpg)          /* background-image */
+       top center / 200px 200px /* background-position / background-size */
+       no-repeat                /* background-repeat */
+       fixed;                   /* background-attachment */
+  }
+  /*This above CSS code is fully functional and works. It uses all of the properties in the comments ^ into one shorthand propert called "background".

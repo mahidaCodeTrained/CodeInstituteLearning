@@ -1,0 +1,77 @@
+/*It is important to understand that CSS utilizes multiple different units of measurement. One that is most commonly used is (px) which is short for pixels. 
+
+Relative units of measurement are also very specific and are treated as such.. CSS units of measurement are most of the time
+responsive in nature and are useful when you take into account how a webpage will look on multiple devices and screen sizes. */
+
+
+
+
+
+
+
+
+<Pixels> - /*Pixels (also knows as px) are a very useful tool in measurement. It sets the dimension value on CSS properties that need dimensional value.
+In CSS a pixel is historically set as 1/96 inch, as screen resolution is assumed to be 96 dpi (dots per inch). 
+However, these days many screens have much higher resolution than that. Therefore, there is not necessarily a one-to-one correspondence between a CSS and a screen pixel.
+ The default font size for most browsers is 16px.
+ When you want to set a fixed size that will not change or be responsive to the screen size it is displayed on, pixels are the best way to accomplish this. */
+
+p {
+    width: 300px;  
+}
+
+
+<em & rem> /*Em and Rem unlike pixels, are relative units of measurement in CSS.
+They set the length of any properties in CSS that require length value. */
+
+ p {
+    1em = 16px
+em size = pixel size/16
+}
+
+ /* A rem - which stands for root em - is relative to font-size of the root element, meaning the <html> element.
+
+We can calculate rems by the following formula if the font-size of the root element ( <html> ) is 16px: rem = pixels / 16
+
+rems , unlike ems , are consistent. They do not depend on the values set by the parents of the current element, 
+and so can be simpler to use when first working with relative units of measurement in CSS. */
+
+
+
+/*The most responsive measurement in CSS is regarded as being the percentage %. For example if a <div> element was set to be 200px wide and a child <div> nested inside
+was set at 50% then the child div element will be 100px. 
+   This is because it is set a 50% of the parent div. As you can imagine, the percentage unit of measurement is very useful for 
+   dealing with designing websites to look good on all the different screen sizes. */
+
+   .circle {
+    width:100px;              /*This is an example of this percentage unit being used.*/
+    height:100px;
+    background-color:red;
+    border-radius:50%;
+}
+
+/*Another unit of measurement is called (vw) which stands for viewport width.
+This unit of measurement was initially designed as a way of sizing elements relative to the browser window viewport.
+
+Viewport width (vw) is a percentage of the full viewport width. This differs from the % unit in that it was relative to the containing element.
+ If you have a phone of screen width 500px then 10vw is 50px. */
+
+div {
+
+  background-color: rgb(0, 247, 255);
+  height:200px;
+  width: 50vw;
+}
+
+
+/*Viewport Height (vh) is another measurement unit which is relative to the browser windows viewport height. The vh unit relates to the height of the full viewport. 
+For example, 10vh will resolve to 10% of the current viewport height. 
+Viewport height is useful if you want to constrain your application to the height of the browser viewport. You would use 100vh to do this. 
+Another example is a sticky footer. If you add a min-height: 100vh; to the body element,
+ then your footer will stay at the bottom of the screen even if there is insufficient content to push it down. */
+
+ .vhbox {
+    background: yellow;
+    height:30vh;
+    width:200px;
+}

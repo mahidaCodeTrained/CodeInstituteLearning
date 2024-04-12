@@ -97,3 +97,98 @@ font-family: New Times Roman;
     /*The DOM */
      
   /*The "D O M" represents the Document Object Model. This model represents each of the HTML elements on a page and their relationships to each other.
+  The greater than symbol > on a line of code in the selector indicates the relationship that is in place in the code. For example if a <p> is a child of a section element,
+  and you wanted to target all of the <p's> that are direct children of the section element throughout the code (WITHOUT) targeting all of the general <p> elements then the code 
+  would look like this.... */
+  
+  section > p {
+    color:blue;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /*These ^ p's that are within section elements as direct children will now be blue in text and their font will be Arial. */
+
+  /*If you wanted to target desecendents of elements which aren't direct children then you would target them in the same way but without the greater
+  than symbol. You would write your code like this, if for example the section had a child element such as a article that had a child <p> inside of it. .....*/
+
+  section p {
+
+    color:aquamarine;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: chocolate;
+  }
+  /*Therefore, all of the p elements that are not direct children but descendents that are nested within the <section> element will all have a aqaumarine coloured text,
+  a font of Times New Roman and a background color of chocolate. It is also important to note that you can add more than two selectors when talking about descendants. 
+  If you have a <p> element that is a child of the <aside> element which is a child of a <section> element and you wanted to target all the <p>'s that are children of <asides>,
+  which are children of <sections> in your text then the code will be written like this. CHECK THESE 3 EXAMPLES BELOW. */
+
+               section aside p {                             /*This will apply to all p elements inside aside which are inside sections.*/
+                    color:aqua;
+                    background-color: brown;
+                
+               }                                     
+                                                          aside p {             /*This will apply to all p elements inside <aside> elements */
+                                                            color:aqua;
+                                                            background-color: brown;
+                                                          }
+                                                                                                             p {      /*This will apply to all p elements in the code.*/
+                                                                                                              color:aqua;
+                                                                                                              background-color: brown;
+                                                                                                             }
+
+/*Sibling selectors in CSS code is a little bit different. Instead of using either a comma, between selectors which allows them to share the same styles without using classes.
+A sibling selector will use a ~ symbol in between the selectors. For example if you have a code with...*/
+
+
+<style>
+<div>div1</div>                                       
+<div>div2</div>                                              
+<header>heading</header>                                     
+<p>a p</p
+<div>div3</div>
+<div>div4</div>
+
+</style>
+
+/* If i used... */
+header ~ div {
+  color:blue;
+  background-color:brown;            /*This would then apply to all div elements that are younger siblings of the header element as well as the header itself. 
+                                        However it will not be applied to the div elements that came before because they are older siblings. */
+}
+
+
+/*===============================================================================================================================================================================*/
+/*Lets now take a look at how CSS can be used in a html document. These are the three different places you can write CSS for HTML. There is inlined, embedded or External CSS.
+
+Inline styling is like this inside the html code:*/ <h1 style="color:blue; background: blue;"> /*The CSS is inlined into the HTML code. */
+ /*Inline CSS is often used for debugging. It is much faster and easier to change a style quickly in a debugging program like Chrome Developer Tools and see the results 
+immediately in the browser than to change the source file.
+
+Inline CSS is also used in emails. External files are not loaded into email templates, and so inline styles are beneficial. 
+Inline CSS has the highest level of specificity, so using it will override other CSS rules for an element.*/
+
+
+/*Embedded styling is done inside the <head> element in the page using a <style> element to create your CSS, an example would be all the code we have done above. 
+It is important to note that this style of CSS has it's limitations as if you have more than one webpage, the styling would have to be completed on every single one and 
+if you have any changes then you would have to change it seperately on each document. */
+
+
+/*External CSS is CSS that is created in another file which is them embedded into the <head> element using a link element. EXAMPLE */
+<link href="style.css" rel="stylesheet">   /*The href link links the external file where the CSS is kept. The rel attribute allows the computer to know it's a stylesheet. 
+
+This is extremely useful for developers as files of CSS and JavaScript are usually done in seperate files to make sure
+that the code is easy to read and follow for other develkopers that are wishing to work n the code maybe in opensource or in a job role. 
+This is called: Seperation of Concerns. */
+
+/*It is important to note that CSS reads program from top to bottom so any declaration of a CSS rule twice (one on top of the page and one on the bottom)
+CSS will override the one on the top with the more recent one on the bottom.
+
+
+CSS can be very specfic. For example a class selector will always override a element selector whereas, an ID selector will override both of them.
+
+properties can also be inherited from parent to child in CSS. */
+<p style="border: solid 1px red; color: red;">
+  This is a paragraph
+  <span>with a span nested inside it</span>
+</p>

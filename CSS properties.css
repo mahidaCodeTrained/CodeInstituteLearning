@@ -1,0 +1,268 @@
+/*This area of the codespace will be looking at CSS properties that are used to stylise HTML elements. */
+
+/*We will start with font-family*/
+
+div {
+    font-family: 'Courier New', Courier, monospace;  /*Font family changes the text font inside html elements such as <p> <h1> and <div> that include many elements. */
+
+}
+
+/*Developers have to take into account that fonts can be downloaded and saved in your project directory or served from online websites like Google Fonts. 
+However, some browsers typically use their own fonts and developers have to be wary about this. In the example CSS code above we can see THREE different fonts. 
+                               This is due to one "Courier New" being the preferred font that the developer is telling the webpage to adopt. 
+                               The next font "Courier" is what we call a "websafe font" designed to be used when the browser doesn't support the preferred font.
+                               It is important to note that these are fonts that have been designed purposefully for the web and are supported by all the browsers.
+
+
+                               The next one that we can see is "monospace" that is the generic font, the fallback font incase the preferred font is not loaded. 
+                               Therefore, the webpage will search for the fallback font. In this code ^ "monospace". */
+
+                              /* font-family: Helvetica, sans-serif;
+                               If the font that we wish to use has a space in its name, then we wrap the name in quotation marks:
+                               font-family: "Trebuchet MS", sans-serif; */                    
+                               
+                            
+/*The next property that we wull cover is :color*/
+
+div {
+    color:aqua;  /*This is how to call upon a color property in CSS. This changes the color of text into aqua. There is 140 "names" */
+}
+/*There are four ways that color can be introduced in CSS. Those ways are....
+1. Names
+2. HEX values
+3. HSL   (HSL stands for hue, saturation, and lightness.)
+4. RGBA  (RGBA is red, green and blue with the (a) being "alpha channel" to change the opacity of the color)
+
+The code above used "names" to introduce color into CSS with the name aqua. The following codes below will showcase the other ways to introduce color into CSS.
+
+HEX CODE (COLOR) */
+
+div{
+  color:#FFE4C4;    /*This is what is called a hex value.*/
+}
+
+
+/*HSL CODE (COLOR)*/
+
+div {
+color:hsl(0,100%, 50%)
+}
+
+/*RGBA CODE (color)*/
+
+div {
+    color:rgba(255, 0, 1)
+}
+
+/*=================================================================================================================================================================*/
+/*We will now cover font-size and font-weight properties. 
+
+- Font Size */
+
+/*Every browser has a defult font size. Additionally, even some HTML elements such as <h1> have a inherit font size. In CSS you can declare a font size using either..
+a keyword or numerical value.
+A font-size keyword can be absolute or relative. 
+Therefore you can choose absolute sizes from xx-small, x-small, small, medium, large, x-large, xx-large, and xxx-large to resize it. 
+                 It is important to note that you can also use relative keywords such as larger or smaller.
+
+                 length	-   Sets the font-size to a fixed size in px, em, rem etc
+                      %	-  Sets the font-size to a percent of the parent element's font size
+                  inherit- Inherits this property from its parent element
+                 initial	- Sets this property to its default value*/
+
+
+
+                 div {
+                    font-size:1.3rem;
+                 }
+               
+               div {
+                font-size:larger
+               }
+
+               div {
+                font-size: xx-large;
+               }
+               
+                 /* -Font Weight */
+
+/*Font Weight is the property that defines the thickness of a font's stroke. It as it's name suggests sets the weight of a font.
+You can specify weight using keywords, numerical values and relative values.
+We can use Absolute keywords such as normal and bold, and relative keywords such as lighter and bolder. A font-weight of 400 is the same as normal, 
+700 is the same as bold. Not all fonts are designed with all possible font weights.
+ In the case there is no exact match, the browser will use the nearest weight available to the one you specify. */
+
+ h1 {
+    font-family: "Times New Roman", serif;
+    font-weight: 700;
+ }
+ p {
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+ }
+
+ /*========================================================================================================================================================================*/
+
+ /*The next property we will discus is text-align which is a very much used property in webpages. */
+
+ text-align {}
+ /* The text align property changes the display on text on the screen. It can be displayed in different values from... 
+ left, right, center, and justify.
+
+ Justify - The content aligns to fit as many string blocks onto one line as possible. 
+ The first word on that line is aligned with the left side of the container, and the last word is along the right side of the container. */
+
+ div {
+  text-align:center   /*This will put the text in the middle of the page. */
+ }
+
+ /*===============================================================================================*/
+
+ /*The next property we will discuss is vertical-align, this property sets a position in the y-axis
+ /* Keyword values */
+div {
+ vertical-align: baseline;
+vertical-align: sub;
+vertical-align: super;
+vertical-align: text-top;               /*These are the values that are used with vertical-align*/
+vertical-align: text-bottom;
+vertical-align: middle;
+vertical-align: top;
+vertical-align: bottom;
+
+/* length values */
+vertical-align: 5rem;
+vertical-align: 6px;
+
+/* percentage values */
+vertical-align: 30%;
+}
+/*======================================================================================================================*/
+/*The next property we will discus will be text-transform and text-decoration and font-style. */
+/* Text-transform is a property in CSS that allows you to change a text to lowercase or uppercase. 
+You can use it by setting capitalize, uppercase or lowercase as a value to the text-transform property. */
+
+div {
+  text-transform:uppercase;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
+
+/*===========================================================================================*/
+/*The text-decoration CSS property sets the appearance of decorative lines on text.It can be used to set a line, line color, line style and line thickness. 
+The lines can go under the text, over the text, through the text or above and below the text. You can also remove default underline such as seen on a link. 
+
+Text-decoration is a shorthand for other properties so you can use multiple space-separated values representing the longhand properties.
+ If applied to a parent element, then descendant elements will also be decorated. */
+
+ /* Keyword values */
+div{
+ text-decoration: underline;
+text-decoration: underline dotted;
+text-decoration: underline dotted blue;
+text-decoration: underline overline;
+text-decoration: blue wavy underline;
+}
+/*=========================================================================================================================================================*/
+/*Font Style is another property we will look at. 
+       Font-style controls the style of the text you can use this property with values such as italics and normal or oblique */
+
+      div {
+        font-style: normal;
+        font-style: italic;
+        font-style: oblique;
+        font-style: oblique 18deg;
+      }
+
+  
+
+
+/*The next thing that we will discuss is something called block elements. This is a HTML element that takes up the horizontal length of a page (left to right0 for example..
+a div is a block element as is a <p> paragraph element. */
+
+/* useful properties are max-height, min-height / max-width, min-width. The display property however lets you put block. */
+
+div {
+  display:block
+}
+
+/*Another property is called inline. Unlike block-level elements, inline elements take only as much space as their content. They do not stretch and do not go to the next line.
+ Inline elements can have multiple elements side by side on the same line in a page. 
+
+ Examples are:Examples of inline elements include: <span> - the span tag, <a> - the anchor tag used for creating HTML links, <button> and <input> - 
+ the button and input tags, which are often used in forms. */
+
+ span {
+   display:inline
+
+ }                      /* A inline span element only would take up as much room as it's content in CSS using a border property. 
+                           However, a block element such as a div or p would take up the entire viewport's width. */
+
+/* An inline-block element are created by setting the display property with CSS to the value of "inline-block". 
+    These are very similar to inline elements as we can place them next to eachother. 
+
+         However, the only difference is that THESE CAN HAVE SIZE PROPERTIES.
+         When setting the size properties, there is a nice difference between inline-block and block-level elements. 
+         Inline-block elements will not exceed the number set by the width or height properties, while block-level elements will stretch as wide as possible. */
+
+         div {
+          display:inline-block
+         }
+
+
+         /*Now a display of lets say a menu that showcases starters, main course and deserts naturally has to be put on seperate lines on the page taking up space. 
+         With inline-block now the menu that is wrapped inside a div or p element are now in line in the page. 
+
+
+
+         ======================================================================================================================*/
+
+  /* The next property that we will discuss is a property that is mainly used in tandem with JavaScript. This property is called visibility.
+  As it's name suggests, it completely makes a HTML element invisible on the screen. This is mainly used with JavaScript and interactive webpages. 
+  As an element can change from hidden to unhidden with JavaScript... */
+
+  div { 
+
+  visibility: hidden;
+  }
+
+  /*<body>
+    <!-- The spans would be next to each other
+    if div was removed completely, but since
+    it is only hidden it takes the whole space           /* EXAMPLE CODE */
+   /* as regular block-level element -->*/
+    /*<span>I am a span</span>
+    <div>
+      I am div, but you can't see me!
+    </div>  
+    <span>I am a span</span>
+  </body>    
+
+  =================================================================================================================================  */
+
+  /* We will now talk about static positiioning. This is a crucial aspect of CSS as it forms the basis of every layout of a page. The webpage is designed vertically with elements
+  being on top of eachother and going down a static vertical flow in the order that they appear in the webpage.
+                                    This important detail of webpages is set by the position property. */
+
+                                    div {
+                                      position:static /*This makes the position of an element in a webpage static meaning even if you scroll it will
+                                      remain on screen */
+                                    }
+
+
+
+/*The next property we will talk about in this essential core codespace of CSS is z-index. The z-index allows you to vertically stack overlapping elements on top 
+of eachother.
+With no z-index value set the elements stack in the same order as they appear in the HTML. The lowest in the hierarchy will appear closest to you. 
+This also means that if element A is on top of element B, no child element of A can be higher in the stack than element B.
+               The higher the z-index value then the closer it will be to you. */
+
+               div {
+                z-index:2;
+               }
+    /*================================================================================================================================================================*/
+
+
+    /* We will now discuss additional properties in a new CSS file called CSS Finsihingup.css. */
+
+        
